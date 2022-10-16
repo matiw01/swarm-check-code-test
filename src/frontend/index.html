@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <script src="index.js" type="text/javascript"></script>
+
+    <body>
+
+        <form >
+            <label>Add Student</label>
+            <br>
+            <input id="studentSurename" type="text" placeholder="student name">
+            <button onclick="addStudent()">Add</button>
+        </form>
+
+        <br>
+
+        <form >
+            <label>Add Coach</label>
+            <br>
+            <input id="coachSurename" type="text" placeholder="coach name">
+            <input id="coachCapacity" type="text" placeholder="coach capacity">
+            <button onclick="addCoach()">Add</button>
+        </form>
+
+        <br>
+
+        <form id="link">
+            <label>Assign Student</label>
+            <br>
+
+            <select id="studentSelect"></select>
+            <select id="coachSelect"></select>
+
+            <button type="button" onclick="assignStudent()">Assign</button>
+        </form>
+
+    </body>
+</html>
