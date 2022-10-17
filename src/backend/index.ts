@@ -2,7 +2,9 @@ import dotenv from "dotenv"
 import  app from "./app"
 import connectDatabase from "./config/database"
 
-dotenv.config({ path: "config/config.env" })
+// dotenv.config({ path: "config/config.env" })
+
+// console.log(process.env.PORT)
 
 const port = process.env.PORT || 4000;
 

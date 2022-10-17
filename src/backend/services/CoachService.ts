@@ -46,19 +46,13 @@ export default class CoachService {
 
     const coaches = await this.get()
 
-    var flag = false;
-
     for (let student of deletedCoach.students){
       for (let coach of coaches) {
-        if (coach.students.length < coach.capacity) {
-          this.addStudent({ coachId : coach._id, studentId : student});
-          flag = true;
-          break
-        }
-        flag = false;
+        const [_, success] = await this.addStudent({coachId : coach._id, studentId : student})
+        
+        if (success){break}
     }
   }
-  return [deletedCoach, flag];
+  return [deletedCoach, true];
   }
-
 }
